@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-primary: #4f46e5;
+  --color-brand-bg: #f1f5f9;
+}
+
+@layer base {
+  * {
+    font-family: var(--font-sans);
+    @apply border-slate-200;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased overflow-hidden;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full hover:bg-indigo-400 transition-colors;
+}
